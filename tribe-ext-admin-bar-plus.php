@@ -141,17 +141,17 @@ if (
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-general',
 				'parent' => 'tribe-events-settings',
-				'title' => 'General',
+				'title' => __( 'General', 'tribe-common' ),
 				'href'  => 'edit.php?page=tribe-common&tab=general&post_type=tribe_events',
 				'meta'  => array(
-					'title' => __('General'),
+					'title' => __( 'General', 'tribe-common' ),
 					'class' => 'my_menu_item_class'
 				),
 			));
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-display',
 				'parent' => 'tribe-events-settings',
-				'title' => 'Display',
+				'title' => __('Display', 'tribe-common' ),
 				'href'  => 'edit.php?page=tribe-common&tab=display&post_type=tribe_events',
 				'meta'  => array(
 					'title' => __('Display'),
@@ -164,10 +164,10 @@ if (
 				$admin_bar->add_menu( array(
 					'id'    => 'tribe-events-settings-tickets',
 					'parent' => 'tribe-events-settings',
-					'title' => 'Tickets (ET)',
+					'title' => __( 'Tickets', 'event-tickets' ),
 					'href'  => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
 					'meta'  => array(
-						'title' => __('Tickets (ET)'),
+						'title' => __( 'Tickets (ET)' ),
 						'class' => 'my_menu_item_class'
 					),
 				));
@@ -178,20 +178,20 @@ if (
 				$admin_bar->add_menu( array(
 					'id'    => 'tribe-events-settings-default-content',
 					'parent' => 'tribe-events-settings',
-					'title' => 'Default Content (ECP)',
+					'title' => __( 'Default Content (ECP)', 'tribe-events-calendar-pro' ),
 					'href'  => 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events',
 					'meta'  => array(
-						'title' => __('Default Content (ECP)'),
+						'title' => __( 'Default Content (ECP)', 'tribe-events-calendar-pro' ),
 						'class' => 'my_menu_item_class'
 					),
 				));
 				$admin_bar->add_menu( array(
 					'id'    => 'tribe-events-settings-additional-fields',
 					'parent' => 'tribe-events-settings',
-					'title' => 'Additional Fields (ECP)',
+					'title' => __( 'Additional Fields', 'tribe-events-calendar-pro' ),
 					'href'  => 'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events',
 					'meta'  => array(
-						'title' => __('Additional Fields (ECP)'),
+						'title' => __( 'Additional Fields', 'tribe-events-calendar-pro' ),
 						'class' => 'my_menu_item_class'
 					),
 				));
@@ -200,30 +200,30 @@ if (
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-licenses',
 				'parent' => 'tribe-events-settings',
-				'title' => 'Licenses',
+				'title' => __( 'Licenses', 'tribe-common' ),
 				'href'  => 'edit.php?page=tribe-common&tab=licenses&post_type=tribe_events',
 				'meta'  => array(
-					'title' => __('Licenses'),
+					'title' => __( 'Licenses', 'tribe-common' ),
 					'class' => 'my_menu_item_class'
 				),
 			));
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-apis',
 				'parent' => 'tribe-events-settings',
-				'title' => 'APIs',
+				'title' => __('APIs', 'tribe-common' ),
 				'href'  => 'edit.php?page=tribe-common&tab=addons&post_type=tribe_events',
 				'meta'  => array(
-					'title' => __('APIs'),
+					'title' => __('APIs', 'tribe-common' ),
 					'class' => 'my_menu_item_class'
 				),
 			));
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-imports',
 				'parent' => 'tribe-events-settings',
-				'title' => 'Imports',
+				'title' => __( 'Imports' ),
 				'href'  => 'edit.php?page=tribe-common&tab=imports&post_type=tribe_events',
 				'meta'  => array(
-					'title' => __('Imports'),
+					'title' => __( 'Imports' ),
 					'class' => 'my_menu_item_class'
 				),
 			));

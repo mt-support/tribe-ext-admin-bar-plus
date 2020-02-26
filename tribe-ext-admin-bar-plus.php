@@ -4,7 +4,7 @@
  * Plugin URI:        https://theeventscalendar.com/extensions/---the-extension-article-url---/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-admin-bar-plus
  * Description:       [Extension Description]
- * Version:           1.0.0
+ * Version:           0.9.0
  * Extension Class:   Tribe\Extensions\AdminBarPlus\Main
  * Author:            Modern Tribe, Inc.
  * Author URI:        http://m.tri.be/1971

@@ -178,10 +178,10 @@ if (
 				$admin_bar->add_menu( array(
 					'id'    => 'tribe-events-settings-default-content',
 					'parent' => 'tribe-events-settings',
-					'title' => __( 'Default Content (ECP)', 'tribe-events-calendar-pro' ),
+					'title' => __( 'Default Content', 'tribe-events-calendar-pro' ),
 					'href'  => 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events',
 					'meta'  => array(
-						'title' => __( 'Default Content (ECP)', 'tribe-events-calendar-pro' ),
+						'title' => __( 'Default Content', 'tribe-events-calendar-pro' ),
 						'class' => 'my_menu_item_class'
 					),
 				));

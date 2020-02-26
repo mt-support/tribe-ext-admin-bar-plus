@@ -25,7 +25,6 @@
 
 namespace Tribe\Extensions\AdminBarPlus;
 
-use Tribe__Autoloader;
 use Tribe__Dependency;
 use Tribe__Extension;
 
@@ -51,11 +50,6 @@ if (
 	 * Extension main class, class begins loading on init() function.
 	 */
 	class Main extends Tribe__Extension {
-
-		/**
-		 * @var Tribe__Autoloader
-		 */
-		private $class_loader;
 
 		/**
 		 * Is Events Calendar PRO active. If yes, we will add some extra functionality.
@@ -112,8 +106,6 @@ if (
 			if ( ! $this->php_version_check() ) {
 				return;
 			}
-
-			$this->class_loader();
 
 			// Insert filter and action hooks here
 			add_action('admin_bar_menu', [ $this, 'add_toolbar_items' ], 100);

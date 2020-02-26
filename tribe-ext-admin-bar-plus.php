@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:       The Events Calendar Extension: Admin Bar Plus
- * Plugin URI:        https://theeventscalendar.com/extensions/---the-extension-article-url---/
+ * Plugin URI:        https://theeventscalendar.com/extensions/tribe-ext-admin-bar-plus/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-admin-bar-plus
- * Description:       [Extension Description]
- * Version:           0.9.0
+ * Description:       The extension will add quick links to the different settings pages to the admin bar menu of The Events Calendar.
+ * Version:           1.0.0
  * Extension Class:   Tribe\Extensions\AdminBarPlus\Main
  * Author:            Modern Tribe, Inc.
  * Author URI:        http://m.tri.be/1971
@@ -167,7 +167,7 @@ if (
 					'title' => __( 'Tickets', 'event-tickets' ),
 					'href'  => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
 					'meta'  => array(
-						'title' => __( 'Tickets (ET)' ),
+						'title' => __( 'Tickets' ),
 						'class' => 'my_menu_item_class'
 					),
 				));

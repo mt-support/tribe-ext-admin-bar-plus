@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: The Events Calendar Extension: Admin Bar Plus\n"
-"POT-Creation-Date: 2020-02-26 23:35+0100\n"
+"POT-Creation-Date: 2020-02-26 23:56+0100\n"
 "PO-Revision-Date: 2020-02-26 23:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: tribe-ext-admin-bar-plus.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
@@ -28,35 +28,35 @@ msgid ""
 "host and inquire about updating PHP."
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:147
+#: tribe-ext-admin-bar-plus.php:144 tribe-ext-admin-bar-plus.php:147
 msgid "General"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:157
+#: tribe-ext-admin-bar-plus.php:154 tribe-ext-admin-bar-plus.php:157
 msgid "Display"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:170
-msgid "Tickets (ET)"
+#: tribe-ext-admin-bar-plus.php:167 tribe-ext-admin-bar-plus.php:170
+msgid "Tickets"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:184
-msgid "Default Content (ECP)"
+#: tribe-ext-admin-bar-plus.php:181 tribe-ext-admin-bar-plus.php:184
+msgid "Default Content"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:194
-msgid "Additional Fields (ECP)"
+#: tribe-ext-admin-bar-plus.php:191 tribe-ext-admin-bar-plus.php:194
+msgid "Additional Fields"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:206
+#: tribe-ext-admin-bar-plus.php:203 tribe-ext-admin-bar-plus.php:206
 msgid "Licenses"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:216
+#: tribe-ext-admin-bar-plus.php:213 tribe-ext-admin-bar-plus.php:216
 msgid "APIs"
 msgstr ""
 
-#: tribe-ext-admin-bar-plus.php:226
+#: tribe-ext-admin-bar-plus.php:223 tribe-ext-admin-bar-plus.php:226
 msgid "Imports"
 msgstr ""
 
@@ -65,12 +65,13 @@ msgid "The Events Calendar Extension: Admin Bar Plus"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid ""
-"https://theeventscalendar.com/extensions/---the-extension-article-url---/"
+msgid "https://theeventscalendar.com/extensions/tribe-ext-admin-bar-plus/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "[Extension Description]"
+msgid ""
+"The extension will add quick links to the different settings pages to the "
+"admin bar menu of The Events Calendar."
 msgstr ""
 
 #. Author of the plugin/theme

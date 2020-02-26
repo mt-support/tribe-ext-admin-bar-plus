@@ -77,6 +77,20 @@ if (
 		public $ecp_active = false;
 
 		/**
+		 * Is Event Tickets active. If yes, we will add some extra functionality.
+		 *
+		 * @return bool
+		 */
+		public $et_active = false;
+
+		/**
+		 * Is Filter Bar active. If yes, we will add some extra functionality.
+		 *
+		 * @return bool
+		 */
+		public $fb_active = false;
+
+		/**
 		 * Setup the Extension's properties.
 		 *
 		 * This always executes even if the required plugins are not present.
@@ -104,7 +118,7 @@ if (
 			// $this->add_required_plugin( 'Tribe_APM', '4.4' );
 
 			// Conditionally-require Events Calendar PRO. If it is active, run an extra bit of code.
-			//add_action( 'tribe_plugins_loaded', [ $this, 'detect_tec_pro' ], 0 );
+			add_action( 'tribe_plugins_loaded', [ $this, 'detect_tribe_plugins' ], 0 );
 		}
 
 		/**
@@ -113,13 +127,21 @@ if (
 		 * Useful for conditionally-requiring a Tribe plugin, whether to add extra functionality
 		 * or require a certain version but only if it is active.
 		 */
-		public function detect_tec_pro() {
+		public function detect_tribe_plugins() {
 			/** @var Tribe__Dependency $dep */
 			$dep = tribe( Tribe__Dependency::class );
 
 			if ( $dep->is_plugin_active( 'Tribe__Events__Pro__Main' ) ) {
 				$this->add_required_plugin( 'Tribe__Events__Pro__Main' );
 				$this->ecp_active = true;
+			}
+			if ( $dep->is_plugin_active( 'Tribe__Tickets__Main' ) ) {
+				$this->add_required_plugin( 'Tribe__Tickets__Main' );
+				$this->et_active = true;
+			}
+			if ( $dep->is_plugin_active( 'Tribe__Events__Filterbar__View' ) ) {
+				$this->add_required_plugin( 'Tribe__Events__Filterbar__View' );
+				$this->fb_active = true;
 			}
 		}
 
@@ -272,6 +294,59 @@ if (
 					'class' => 'my_menu_item_class'
 				),
 			));
+
+			// Inject Event Tickets settings
+			if ( $this->et_active ) {
+				$admin_bar->add_menu( array(
+					'id'    => 'tribe-events-settings-tickets',
+					'parent' => 'tribe-events-settings',
+					'title' => 'Tickets (ET)',
+					'href'  => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
+					'meta'  => array(
+						'title' => __('Tickets (ET)'),
+						'class' => 'my_menu_item_class'
+					),
+				));
+			}
+
+//			// Inject Filter Bar settings
+//			if ( $this->fb_active ) {
+//				$admin_bar->add_menu( array(
+//					'id'    => 'tribe-events-settings-filters',
+//					'parent' => 'tribe-events-settings',
+//					'title' => 'Filters (FB)',
+//					'href'  => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
+//					'meta'  => array(
+//						'title' => __('Filters (FB)'),
+//						'class' => 'my_menu_item_class'
+//					),
+//				));
+//			}
+
+			// Inject Events Calendar PRO settings
+			if ( $this->ecp_active ) {
+				$admin_bar->add_menu( array(
+					'id'    => 'tribe-events-settings-default-content',
+					'parent' => 'tribe-events-settings',
+					'title' => 'Default Content (ECP)',
+					'href'  => 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events',
+					'meta'  => array(
+						'title' => __('Default Content (ECP)'),
+						'class' => 'my_menu_item_class'
+					),
+				));
+				$admin_bar->add_menu( array(
+					'id'    => 'tribe-events-settings-additional-fields',
+					'parent' => 'tribe-events-settings',
+					'title' => 'Additional Fields (ECP)',
+					'href'  => 'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events',
+					'meta'  => array(
+						'title' => __('Additional Fields (ECP)'),
+						'class' => 'my_menu_item_class'
+					),
+				));
+			}
+
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-licenses',
 				'parent' => 'tribe-events-settings',

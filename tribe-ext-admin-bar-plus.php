@@ -139,6 +139,11 @@ if (
 			return true;
 		}
 
+		/**
+		 * Add our custom menu items, as applicable.
+		 *
+		 * @param \WP_Admin_Bar $admin_bar
+		 */
 		function add_toolbar_items( $admin_bar ) {
 			$admin_bar->add_menu( array(
 				'id'    => 'tribe-events-settings-general',

@@ -71,6 +71,8 @@ if (
 		 * This always executes even if the required plugins are not present.
 		 */
 		public function construct() {
+			$this->add_required_plugin( 'Tribe__Events__Main' );
+
 			// Conditionally-require Events Calendar PRO or Event Tickets. If it is active, run an extra bit of code.
 			add_action( 'tribe_plugins_loaded', [ $this, 'detect_tribe_plugins' ], 0 );
 		}

@@ -1,7 +1,7 @@
-=== [The Events Calendar Extension: Admin Bar Plus] ===
+=== The Events Calendar Extension: Admin Bar Plus ===
 Contributors: ModernTribe
 Donate link: http://m.tri.be/29
-Tags: events, calendar
+Tags: events, calendar, admin bar
 Requires at least: 4.9
 Tested up to: 5.3.2
 Requires PHP: 5.6

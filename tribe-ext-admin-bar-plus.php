@@ -148,10 +148,10 @@ if (
 				[
 					'id'     => 'tribe-events-settings-general',
 					'parent' => 'tribe-events-settings',
-					'title'  => __( 'General', 'tribe-common' ),
+					'title'  => __( 'General', 'tribe-ext-admin-bar-plus' ),
 					'href'   => 'edit.php?page=tribe-common&tab=general&post_type=tribe_events',
 					'meta'   => [
-						'title' => __( 'General', 'tribe-common' ),
+						'title' => __( 'General', 'tribe-ext-admin-bar-plus' ),
 						'class' => 'my_menu_item_class',
 					],
 				]
@@ -160,10 +160,10 @@ if (
 				[
 					'id'     => 'tribe-events-settings-display',
 					'parent' => 'tribe-events-settings',
-					'title'  => __( 'Display', 'tribe-common' ),
+					'title'  => __( 'Display', 'tribe-ext-admin-bar-plus' ),
 					'href'   => 'edit.php?page=tribe-common&tab=display&post_type=tribe_events',
 					'meta'   => [
-						'title' => __( 'Display' ),
+						'title' => __( 'Display', 'tribe-ext-admin-bar-plus' ),
 						'class' => 'my_menu_item_class',
 					],
 				]
@@ -175,10 +175,10 @@ if (
 					[
 						'id'     => 'tribe-events-settings-tickets',
 						'parent' => 'tribe-events-settings',
-						'title'  => __( 'Tickets', 'event-tickets' ),
+						'title'  => __( 'Tickets', 'tribe-ext-admin-bar-plus' ),
 						'href'   => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
 						'meta'   => [
-							'title' => __( 'Tickets' ),
+							'title' => __( 'Tickets', 'tribe-ext-admin-bar-plus' ),
 							'class' => 'my_menu_item_class',
 						],
 					]
@@ -191,10 +191,10 @@ if (
 					[
 						'id'     => 'tribe-events-settings-default-content',
 						'parent' => 'tribe-events-settings',
-						'title'  => __( 'Default Content', 'tribe-events-calendar-pro' ),
+						'title'  => __( 'Default Content', 'tribe-ext-admin-bar-plus' ),
 						'href'   => 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events',
 						'meta'   => [
-							'title' => __( 'Default Content', 'tribe-events-calendar-pro' ),
+							'title' => __( 'Default Content', 'tribe-ext-admin-bar-plus' ),
 							'class' => 'my_menu_item_class',
 						],
 					]
@@ -203,10 +203,10 @@ if (
 					[
 						'id'     => 'tribe-events-settings-additional-fields',
 						'parent' => 'tribe-events-settings',
-						'title'  => __( 'Additional Fields', 'tribe-events-calendar-pro' ),
+						'title'  => __( 'Additional Fields', 'tribe-ext-admin-bar-plus' ),
 						'href'   => 'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events',
 						'meta'   => [
-							'title' => __( 'Additional Fields', 'tribe-events-calendar-pro' ),
+							'title' => __( 'Additional Fields', 'tribe-ext-admin-bar-plus' ),
 							'class' => 'my_menu_item_class',
 						],
 					]
@@ -217,10 +217,10 @@ if (
 				[
 					'id'     => 'tribe-events-settings-licenses',
 					'parent' => 'tribe-events-settings',
-					'title'  => __( 'Licenses', 'tribe-common' ),
+					'title'  => __( 'Licenses', 'tribe-ext-admin-bar-plus' ),
 					'href'   => 'edit.php?page=tribe-common&tab=licenses&post_type=tribe_events',
 					'meta'   => [
-						'title' => __( 'Licenses', 'tribe-common' ),
+						'title' => __( 'Licenses', 'tribe-ext-admin-bar-plus' ),
 						'class' => 'my_menu_item_class',
 					],
 				]
@@ -229,10 +229,10 @@ if (
 				[
 					'id'     => 'tribe-events-settings-apis',
 					'parent' => 'tribe-events-settings',
-					'title'  => __( 'APIs', 'tribe-common' ),
+					'title'  => __( 'APIs', 'tribe-ext-admin-bar-plus' ),
 					'href'   => 'edit.php?page=tribe-common&tab=addons&post_type=tribe_events',
 					'meta'   => [
-						'title' => __( 'APIs', 'tribe-common' ),
+						'title' => __( 'APIs', 'tribe-ext-admin-bar-plus' ),
 						'class' => 'my_menu_item_class',
 					],
 				]
@@ -241,10 +241,10 @@ if (
 				[
 					'id'     => 'tribe-events-settings-imports',
 					'parent' => 'tribe-events-settings',
-					'title'  => __( 'Imports' ),
+					'title'  => __( 'Imports', 'tribe-ext-admin-bar-plus' ),
 					'href'   => 'edit.php?page=tribe-common&tab=imports&post_type=tribe_events',
 					'meta'   => [
-						'title' => __( 'Imports' ),
+						'title' => __( 'Imports', 'tribe-ext-admin-bar-plus' ),
 						'class' => 'my_menu_item_class',
 					],
 				]

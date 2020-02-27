@@ -156,6 +156,7 @@ if (
 					],
 				]
 			);
+
 			$admin_bar->add_menu(
 				[
 					'id'     => 'tribe-events-settings-display',
@@ -169,49 +170,9 @@ if (
 				]
 			);
 
-			// Inject Event Tickets settings
-			if ( $this->et_active ) {
-				$admin_bar->add_menu(
-					[
-						'id'     => 'tribe-events-settings-tickets',
-						'parent' => 'tribe-events-settings',
-						'title'  => __( 'Tickets', 'tribe-ext-admin-bar-plus' ),
-						'href'   => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
-						'meta'   => [
-							'title' => __( 'Tickets', 'tribe-ext-admin-bar-plus' ),
-							'class' => 'my_menu_item_class',
-						],
-					]
-				);
-			}
+			$this->add_toolbar_items_et( $admin_bar );
 
-			// Inject Events Calendar PRO settings
-			if ( $this->ecp_active ) {
-				$admin_bar->add_menu(
-					[
-						'id'     => 'tribe-events-settings-default-content',
-						'parent' => 'tribe-events-settings',
-						'title'  => __( 'Default Content', 'tribe-ext-admin-bar-plus' ),
-						'href'   => 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events',
-						'meta'   => [
-							'title' => __( 'Default Content', 'tribe-ext-admin-bar-plus' ),
-							'class' => 'my_menu_item_class',
-						],
-					]
-				);
-				$admin_bar->add_menu(
-					[
-						'id'     => 'tribe-events-settings-additional-fields',
-						'parent' => 'tribe-events-settings',
-						'title'  => __( 'Additional Fields', 'tribe-ext-admin-bar-plus' ),
-						'href'   => 'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events',
-						'meta'   => [
-							'title' => __( 'Additional Fields', 'tribe-ext-admin-bar-plus' ),
-							'class' => 'my_menu_item_class',
-						],
-					]
-				);
-			}
+			$this->add_toolbar_items_ecp( $admin_bar );
 
 			$admin_bar->add_menu(
 				[
@@ -225,6 +186,7 @@ if (
 					],
 				]
 			);
+
 			$admin_bar->add_menu(
 				[
 					'id'     => 'tribe-events-settings-apis',
@@ -237,6 +199,7 @@ if (
 					],
 				]
 			);
+
 			$admin_bar->add_menu(
 				[
 					'id'     => 'tribe-events-settings-imports',
@@ -245,6 +208,66 @@ if (
 					'href'   => 'edit.php?page=tribe-common&tab=imports&post_type=tribe_events',
 					'meta'   => [
 						'title' => __( 'Imports', 'tribe-ext-admin-bar-plus' ),
+						'class' => 'my_menu_item_class',
+					],
+				]
+			);
+		}
+
+		/**
+		 * Add ET's custom menu items.
+		 *
+		 * @param \WP_Admin_Bar $admin_bar
+		 */
+		function add_toolbar_items_et( $admin_bar ) {
+			if ( ! $this->et_active ) {
+				return;
+			}
+
+			$admin_bar->add_menu(
+				[
+					'id'     => 'tribe-events-settings-tickets',
+					'parent' => 'tribe-events-settings',
+					'title'  => __( 'Tickets', 'tribe-ext-admin-bar-plus' ),
+					'href'   => 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events',
+					'meta'   => [
+						'title' => __( 'Tickets', 'tribe-ext-admin-bar-plus' ),
+						'class' => 'my_menu_item_class',
+					],
+				]
+			);
+		}
+
+		/**
+		 * Add ECP's custom menu items.
+		 *
+		 * @param \WP_Admin_Bar $admin_bar
+		 */
+		function add_toolbar_items_ecp( $admin_bar ) {
+			if ( ! $this->ecp_active ) {
+				return;
+			}
+
+			$admin_bar->add_menu(
+				[
+					'id'     => 'tribe-events-settings-default-content',
+					'parent' => 'tribe-events-settings',
+					'title'  => __( 'Default Content', 'tribe-ext-admin-bar-plus' ),
+					'href'   => 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events',
+					'meta'   => [
+						'title' => __( 'Default Content', 'tribe-ext-admin-bar-plus' ),
+						'class' => 'my_menu_item_class',
+					],
+				]
+			);
+			$admin_bar->add_menu(
+				[
+					'id'     => 'tribe-events-settings-additional-fields',
+					'parent' => 'tribe-events-settings',
+					'title'  => __( 'Additional Fields', 'tribe-ext-admin-bar-plus' ),
+					'href'   => 'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events',
+					'meta'   => [
+						'title' => __( 'Additional Fields', 'tribe-ext-admin-bar-plus' ),
 						'class' => 'my_menu_item_class',
 					],
 				]

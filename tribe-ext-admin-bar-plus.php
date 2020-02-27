@@ -215,7 +215,7 @@ if (
 		}
 
 		/**
-		 * Add ET's custom menu items.
+		 * Add Event Tickets' custom menu items.
 		 *
 		 * @param \WP_Admin_Bar $admin_bar
 		 */
@@ -239,7 +239,7 @@ if (
 		}
 
 		/**
-		 * Add ECP's custom menu items.
+		 * Add Events Calendar Pro's custom menu items.
 		 *
 		 * @param \WP_Admin_Bar $admin_bar
 		 */
@@ -260,6 +260,7 @@ if (
 					],
 				]
 			);
+
 			$admin_bar->add_menu(
 				[
 					'id'     => 'tribe-events-settings-additional-fields',
@@ -273,6 +274,5 @@ if (
 				]
 			);
 		}
-
 	} // end class
 } // end if class_exists check

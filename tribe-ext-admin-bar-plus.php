@@ -3,8 +3,8 @@
  * Plugin Name:       The Events Calendar Extension: Admin Bar Plus
  * Plugin URI:        https://theeventscalendar.com/extensions/tribe-ext-admin-bar-plus/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-admin-bar-plus
- * Description:       The extension will add quick links to the different settings pages to the admin bar menu of The Events Calendar.
- * Version:           1.0.0
+ * Description:       The extension will add quick links to the different settings pages to the admin bar menu of The Events Calendar and to the Events menu in the sidebar.
+ * Version:           1.1.0
  * Extension Class:   Tribe\Extensions\AdminBarPlus\Main
  * Author:            Modern Tribe, Inc.
  * Author URI:        http://m.tri.be/1971

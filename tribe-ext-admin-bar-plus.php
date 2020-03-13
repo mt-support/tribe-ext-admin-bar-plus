@@ -144,7 +144,7 @@ if (
 		 *
 		 * @param \WP_Admin_Bar $admin_bar
 		 */
-		function add_toolbar_items( $admin_bar ) {
+		public function add_toolbar_items( $admin_bar ) {
 			$admin_bar->add_menu(
 				[
 					'id'     => 'tribe-events-settings-general',
@@ -220,7 +220,7 @@ if (
 		 *
 		 * @param \WP_Admin_Bar $admin_bar
 		 */
-		function add_toolbar_items_et( $admin_bar ) {
+		public function add_toolbar_items_et( $admin_bar ) {
 			if ( ! $this->et_active ) {
 				return;
 			}
@@ -244,7 +244,7 @@ if (
 		 *
 		 * @param \WP_Admin_Bar $admin_bar
 		 */
-		function add_toolbar_items_ecp( $admin_bar ) {
+		public function add_toolbar_items_ecp( $admin_bar ) {
 			if ( ! $this->ecp_active ) {
 				return;
 			}
@@ -279,7 +279,7 @@ if (
 		/**
 		 * Add submenu items
 		 */
-		function add_submenu_items() {
+		public function add_submenu_items() {
 			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> General', 'manage_options', 'edit.php?page=tribe-common&tab=general&post_type=tribe_events', '' );
 			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Display', 'manage_options', 'edit.php?page=tribe-common&tab=display&post_type=tribe_events', '' );
 

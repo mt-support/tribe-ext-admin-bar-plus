@@ -110,6 +110,7 @@ if (
 			}
 
 			add_action( 'admin_bar_menu', [ $this, 'add_toolbar_items' ], 100 );
+			add_action( 'admin_menu', [ $this, 'add_submenu_items'], 11 );
 		}
 
 		/**
@@ -274,5 +275,26 @@ if (
 				]
 			);
 		}
+
+		/**
+		 * Add submenu items
+		 */
+		function add_submenu_items() {
+			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> General', 'manage_options', 'edit.php?page=tribe-common&tab=general&post_type=tribe_events', '' );
+			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Display', 'manage_options', 'edit.php?page=tribe-common&tab=display&post_type=tribe_events', '' );
+
+			if ( $this->et_active ) {
+				add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Tickets', 'manage_options', 'edit.php?page=tribe-common&tab=event-tickets&post_type=tribe_events', '' );
+			}
+
+			if ( $this->ecp_active ) {
+				add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Default Content', 'manage_options', 'edit.php?page=tribe-common&tab=defaults&post_type=tribe_events', '' );
+				add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Additional Fields', 'manage_options', 'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events', '' );
+			}
+			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Licenses', 'manage_options', 'edit.php?page=tribe-common&tab=licenses&post_type=tribe_events', '' );
+			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> APIs', 'manage_options', 'edit.php?page=tribe-common&tab=addons&post_type=tribe_events', '' );
+			add_submenu_page( 'edit.php?post_type=tribe_events', '', '-> Imports', 'manage_options', 'edit.php?page=tribe-common&tab=imports&post_type=tribe_events', '' );
+		}
+
 	} // end class
 } // end if class_exists check

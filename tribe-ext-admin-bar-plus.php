@@ -110,7 +110,7 @@ if (
 			}
 
 			add_action( 'admin_bar_menu', [ $this, 'add_toolbar_items' ], 100 );
-			add_action( 'admin_menu', [ $this, 'add_submenu_items'], 11 );
+			add_action( 'admin_menu', [ $this, 'add_submenu_items' ], 11 );
 		}
 
 		/**

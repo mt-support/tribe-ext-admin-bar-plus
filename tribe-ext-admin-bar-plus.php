@@ -4,7 +4,7 @@
  * Plugin URI:        https://theeventscalendar.com/extensions/tribe-ext-admin-bar-plus/
  * GitHub Plugin URI: https://github.com/mt-support/tribe-ext-admin-bar-plus
  * Description:       The extension will add quick links to the different settings pages to the admin bar menu of The Events Calendar and to the Events menu in the sidebar.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Extension Class:   Tribe\Extensions\AdminBarPlus\Main
  * Author:            Modern Tribe, Inc.
  * Author URI:        http://m.tri.be/1971
@@ -94,6 +94,14 @@ if (
 			if ( $dep->is_plugin_active( 'Tribe__Tickets__Main' ) ) {
 				$this->add_required_plugin( 'Tribe__Tickets__Main' );
 				$this->et_active = true;
+			}
+			if ( $dep->is_plugin_active( 'Tribe__Events__Filterbar__View' ) ) {
+				$this->add_required_plugin( 'Tribe__Events__Filterbar__View' );
+				$this->fb_active = true;
+			}
+			if ( $dep->is_plugin_active( 'Tribe__Events__Community__Main' ) ) {
+				$this->add_required_plugin( 'Tribe__Events__Community__Main' );
+				$this->ce_active = true;
 			}
 		}
 
@@ -319,6 +327,24 @@ if (
 					'-> ' . __( 'Additional Fields', 'tribe-events-calendar-pro' ),
 					'manage_options',
 					'edit.php?page=tribe-common&tab=additional-fields&post_type=tribe_events'
+				);
+			}
+
+			if ( $this->ce_active ) {
+				add_submenu_page(
+					'edit.php?post_type=tribe_events', '',
+					'-> ' . __( 'Community', 'tribe-events-community' ),
+					'manage_options',
+					'edit.php?page=tribe-common&tab=community&post_type=tribe_events'
+				);
+			}
+
+			if ( $this->fb_active ) {
+				add_submenu_page(
+					'edit.php?post_type=tribe_events', '',
+					'-> ' . __( 'Filters', 'tribe-events-filter-view' ),
+					'manage_options',
+					'edit.php?page=tribe-common&tab=filter-view&post_type=tribe_events'
 				);
 			}
 

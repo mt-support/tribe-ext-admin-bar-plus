@@ -3,9 +3,9 @@ Contributors: ModernTribe
 Donate link: http://m.tri.be/29
 Tags: events, calendar, admin bar
 Requires at least: 4.9
-Tested up to: 5.3.2
+Tested up to: 5.5.3
 Requires PHP: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPL version 3 or any later version
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,13 +31,17 @@ We're always interested in your feedback and our [Help Desk](https://support.the
 
 == Changelog ==
 
+= [1.2.1] 2020-11-11 =
+
+* Fix - Added missing property declarations for Filter Bar and Community Events.
+
 = [1.2.0] 2020-03-27 =
 
-* Added links to the Filter and Community tabs under the Events menu in the sidebar.
+* Feature - Added links to the Filter and Community tabs under the Events menu in the sidebar.
 
 = [1.1.0] 2020-03-24 =
 
-* Added links to the settings pages under the Events menu in the sidebar.
+* Feature - Added links to the settings pages under the Events menu in the sidebar.
 
 = [1.0.0] 2020-02-26 =
 

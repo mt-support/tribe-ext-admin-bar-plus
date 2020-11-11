@@ -66,6 +66,20 @@ if (
 		public $et_active = false;
 
 		/**
+		 * Is Filter Bar active. If yes, we will add some extra functionality.
+		 *
+		 * @return bool
+		 */
+		public $fb_active = false;
+
+		/**
+		 * Is Community Events active. If yes, we will add some extra functionality.
+		 *
+		 * @return bool
+		 */
+		public $ce_active = false;
+
+		/**
 		 * Setup the Extension's properties.
 		 *
 		 * This always executes even if the required plugins are not present.

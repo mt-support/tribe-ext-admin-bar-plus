@@ -1,3 +1,5 @@
+** This extension is depracated in favor of [https://github.com/mt-support/tec-labs-admin-bar-plus](https://github.com/mt-support/tec-labs-admin-bar-plus)**
+
 === The Events Calendar Extension: Admin Bar Plus ===
 Contributors: ModernTribe
 Donate link: http://m.tri.be/29
